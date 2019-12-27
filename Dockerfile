@@ -2,7 +2,7 @@ FROM openjdk:11-jdk
 
 LABEL maintainer="saul.pina@ingeint.com"
 
-ENV IDEMPIERE_VERSION 7.1
+ENV IDEMPIERE_VERSION 6.2
 ENV IDEMPIERE_HOME /opt/idempiere
 ENV IDEMPIERE_PLUGINS_HOME $IDEMPIERE_HOME/plugins
 

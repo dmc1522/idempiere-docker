@@ -1,4 +1,4 @@
-# Docker iDempiere 7.1
+# Docker iDempiere 6.2
 
 - [Docker Hub](https://hub.docker.com/r/idempiereofficial/idempiere)
 - [Repository](https://github.com/idempiere/idempiere-docker)
@@ -40,7 +40,7 @@ $ docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres postg
 > Remember to change the postgres port in case you have one previously running, example `-p 5433:5432`
 
 ```bash
-$ docker run -d --name idempiere -p 8080:8080 --link postgres:postgres idempiereofficial/idempiere:7.1
+$ docker run -d --name idempiere -p 8080:8080 --link postgres:postgres idempiereofficial/idempiere:6.2
 ```
 
 For persistent data see the section [Volumes](#volumes).
@@ -59,7 +59,7 @@ $ docker run -d --name idempiere -p 8080:8080 --network host\
   -e DB_USER=adempiere\
   -e DB_PASS=adempiere\
   -e DB_ADMIN_PASS=postgres\
-  idempiereofficial/idempiere:7.1
+  idempiereofficial/idempiere:6.2
 ```
 
 For secrets see the section [Docker Secrets](#docker-secrets).
@@ -77,7 +77,7 @@ version: '3.7'
 
 services:
   idempiere:
-    image: idempiereofficial/idempiere:7.1
+    image: idempiereofficial/idempiere:6.2
     volumes:
       - idempiere_config:/opt/idempiere/configuration
       - idempiere_plugins:/opt/idempiere/plugins
@@ -116,7 +116,7 @@ $ make build run
 
 Command list:
 
-`make build` creates iDempiere docker image (with labels `idempiere:7.1` and `idempiere:latest`)
+`make build` creates iDempiere docker image (with labels `idempiere:6.2` and `idempiere:latest`)
 
 `make run` runs iDempiere docker stack (includes `postgres:9.6`)
 
@@ -143,7 +143,7 @@ The following users and passwords are part of the initial seed database:
 | - | - | - |
 | IDEMPIERE_HOME | /opt/idempiere | Path to iDempiere |
 | IDEMPIERE_PLUGINS_HOME | /opt/idempiere/plugins | Path to iDempiere plugins |
-| IDEMPIERE_VERSION | 7.1 | iDempiere Version |
+| IDEMPIERE_VERSION | 6.2 | iDempiere Version |
 | IDEMPIERE_PORT | 8080 | HTTP port for iDempiere |
 | IDEMPIERE_SSL_PORT | 8443 | HTTPS port for iDempiere |
 | KEY_STORE_PASS | myPassword | Password for java key store (SSL Certificate) |
@@ -285,7 +285,7 @@ version: '3.7'
 
 services:
   idempiere:
-    image: idempiere:7.1
+    image: idempiere:6.2
     environment:
       - TZ=America/Guayaquil
       - DB_ADMIN_PASS_FILE=/run/secrets/db_admin_pass
