@@ -6,7 +6,7 @@ ENV IDEMPIERE_VERSION 7.1
 ENV IDEMPIERE_HOME /opt/idempiere
 ENV IDEMPIERE_PLUGINS_HOME $IDEMPIERE_HOME/plugins
 ENV IDEMPIERE_LOGS_HOME $IDEMPIERE_HOME/log
-ENV IDEMPIERE_DAILY https://jenkins.idempiere.org/job/iDempiere/ws/org.idempiere.p2/target/products/org.adempiere.server.product/idempiereServer.gtk.linux.x86_64.zip
+ENV IDEMPIERE_DAILY https://jenkins.idempiere.org/job/iDempiere7.1/ws/org.idempiere.p2/target/products/org.adempiere.server.product/idempiereServer.gtk.linux.x86_64.zip
 
 WORKDIR $IDEMPIERE_HOME
 
