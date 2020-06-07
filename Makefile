@@ -1,4 +1,4 @@
-DOCKER_TAG=latest
+DOCKER_TAG=7.1
 
 build:
 	docker build -t idempiere:$(DOCKER_TAG) .
